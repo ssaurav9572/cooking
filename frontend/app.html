@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CookAI — today</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tonight</h1>
+    <p class="lead">Chicken, rice, tomatoes. Dinner for 4 under ₹700. Something new.</p>
+    <a class="button" href="/import">Import a recipe</a>
+  </header>
+  <main>
+    <textarea id="ask" rows="3">I have chicken, rice and tomatoes. Dinner for 4 under 700. Something I have never made.</textarea>
+    <p><button id="go">Recommend</button></p>
+    <section id="today" class="card"></section>
+    <section id="results"></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

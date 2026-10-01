@@ -1,0 +1,62 @@
+:root {
+  --bg: #14120e;
+  --panel: #1e1b16;
+  --line: #3a342c;
+  --text: #f4efe6;
+  --muted: #b7ad9e;
+  --accent: #e37b3a;
+  --ok: #8fbf7a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, "Iowan Old Style", serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header, main { padding: 20px; max-width: 720px; margin: 0 auto; }
+h1 { font-weight: 500; letter-spacing: -0.03em; margin-bottom: 4px; }
+p.lead { color: var(--muted); margin-top: 0; }
+a.button, button {
+  background: var(--accent);
+  color: #1a120c;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 12px 0;
+}
+.muted { color: var(--muted); font-size: 14px; }
+input, textarea {
+  width: 100%;
+  background: #111;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+}
+label { display: block; margin: 12px 0 6px; }
+.import-meta { margin: 8px 0 16px; }
+.import-meta label { flex: 1 1 130px; }
+.confirm-review { display: flex; align-items: center; gap: 8px; margin: 16px 0; }
+.confirm-review input { width: auto; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; font-size: 12px; color: var(--muted); }
+.camera {
+  height: 220px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  margin: 12px 0;
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>CookAI — Cooking</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <link rel="stylesheet" href="/static/cooking.css"/>
+</head>
+<body>
+  <div class="cooking-page">
+    <div class="cooking-shell">
+      <header class="cooking-header">
+        <div class="brand">
+          <p class="brand-name">CookAI</p>
+          <p class="brand-subtitle">
+            Your cooking companion
+          </p>
+        </div>
+        <div
+          id="step"
+          class="progress-pill"
+          aria-live="polite"
+        >
+          Step 1
+        </div>
+      </header>
+      <main class="cooking-grid">
+        <section class="cooking-card instruction-card">
+          <p class="eyebrow">
+            Now cooking
+          </p>
+          <h1 id="title">
+            Your recipe
+          </h1>
+          <div class="instruction-section">
+            <p class="instruction-label">
+              What to do
+            </p>
+            <p
+              id="instruction"
+              aria-live="polite"
+            >
+              Preparing your cooking instructions...
+            </p>
+          </div>
+          <div class="camera">
+            <div class="camera-content">
+              <div class="camera-icon">
+                ◉
+              </div>
+              <p class="camera-title">
+                Cooking vision
+              </p>
+              <p class="camera-text">
+                Use the vision check when you want CookAI
+                to evaluate the current cooking state.
+              </p>
+            </div>
+          </div>
+          <div class="controls">
+            <button
+              id="prev"
+              type="button"
+              class="secondary-button"
+            >
+              Previous
+            </button>
+            <button
+              id="next"
+              type="button"
+              class="primary-button"
+            >
+              Next step
+            </button>
+
+          </div>
+
+          <button
+            id="vision"
+            type="button"
+            class="utility-button"
+          >
+            Check cooking state
+          </button>
+
+          <button
+            id="done"
+            type="button"
+            class="finish-button"
+          >
+            Finish &amp; log meal
+          </button>
+
+        </section>
+
+        <aside class="cooking-card side-card">
+
+          <h2 class="side-heading">
+            While you cook
+          </h2>
+
+          <div class="tip">
+
+            <p class="tip-title">
+              Follow the step
+            </p>
+
+            <p class="tip-text">
+              Complete the current instruction before
+              moving to the next step.
+            </p>
+
+          </div>
+
+          <div class="tip">
+
+            <p class="tip-title">
+              Need help?
+            </p>
+
+            <p class="tip-text">
+              Use the cooking-state check when you are
+              unsure whether the food is ready.
+            </p>
+
+          </div>
+
+          <div class="tip">
+
+            <p class="tip-title">
+              Your progress
+            </p>
+
+            <p class="tip-text">
+              CookAI keeps the active cooking session
+              in your browser while you move through
+              the recipe.
+            </p>
+
+          </div>
+
+          <div class="status">
+            Your meal will be logged when you select
+            “Finish &amp; log meal”.
+          </div>
+
+        </aside>
+
+      </main>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

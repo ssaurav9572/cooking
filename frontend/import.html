@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Import a recipe · CookAI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bring in a recipe</h1>
+    <p class="lead">Paste recipe text or JSON/JSON-LD. Review the ingredients and steps before saving.</p>
+    <a href="/app">← Back to tonight</a>
+  </header>
+  <main>
+    <section class="card">
+      <label for="source">Recipe text or structured recipe JSON</label>
+      <textarea id="source" rows="12" placeholder="Litti Chokha&#10;Serves 4&#10;&#10;Ingredients&#10;2 cups wheat flour&#10;...&#10;&#10;Instructions&#10;1. Knead the flour..." maxlength="20000"></textarea>
+      <p class="muted">This imports text you provide. CookAI does not fetch recipe URLs. If JEV_API_KEY is configured, a short excerpt is sent to Jev for a typed quality check.</p>
+      <button id="preview">Parse and preview</button>
+    </section>
+    <p id="message" class="muted" role="status"></p>
+    <section id="preview-card" class="card" hidden>
+      <h2>Review before saving</h2>
+      <p id="decision" class="muted"></p>
+      <ul id="warnings"></ul>
+      <label for="title">Recipe title</label>
+      <input id="title" maxlength="200" />
+      <label for="cuisine">Cuisine (optional)</label>
+      <input id="cuisine" maxlength="80" />
+      <div class="row import-meta">
+        <label>Servings <input id="servings" type="number" min="1" max="50" /></label>
+        <label>Prep minutes <input id="prep" type="number" min="0" max="1440" /></label>
+        <label>Cook minutes <input id="cook" type="number" min="0" max="1440" /></label>
+      </div>
+      <label for="ingredients">Ingredients (one per line)</label>
+      <textarea id="ingredients" rows="8"></textarea>
+      <label for="steps">Cooking steps (one per line)</label>
+      <textarea id="steps" rows="8"></textarea>
+      <label class="confirm-review"><input id="confirm" type="checkbox" /> I reviewed the title, amounts, ingredients, and cooking steps.</label>
+      <button id="save">Save reviewed recipe</button>
+    </section>
+    <section id="saved" class="card" hidden></section>
+  </main>
+  <script src="/static/import.js"></script>
+</body>
+</html>
